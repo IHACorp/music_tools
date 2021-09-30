@@ -4,6 +4,8 @@
 
 Just change on the edit area and run it
 
+The divide function returns the index on the notes list for the first sub-note
+
 ## Examples
 ```
 notes[0].divide(3) 
