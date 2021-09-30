@@ -47,9 +47,9 @@ def save(notes):
 # Config
 name = "GeneratedTuples"
 start_size = 4 # Measured in Beats
-notes = [Note(0, start_size)]
 ##########################################################
 # Edit Area
+notes = [Note(0, start_size)]
 notes[0].divide(3) 
 notes[1].divide(7) 
 notes[2].divide(3)
