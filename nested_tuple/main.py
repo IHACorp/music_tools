@@ -13,6 +13,9 @@ class Note:
         self.duration = duration
 
     def divide(self, divs):
+        if divs == 1:
+            return
+
         global notes
         self.sub = [] # clearing it will allow interactively changing the tuple on the UI w/o trouble
         time = self.time
@@ -21,6 +24,10 @@ class Note:
             self.sub.append(len(notes)) 
             notes.append(Note(time, duration))
             time += duration
+        return len(notes) - divs
+
+    def delete(self):
+        self.sub = [1]
 
 def save(notes):
     mf = MIDIFile(1) # 1 track
@@ -54,5 +61,19 @@ notes[0].divide(3)
 notes[1].divide(7) 
 notes[2].divide(3)
 notes[3].divide(5) 
+##########################################################
+######### Procedural Generation Example
+# notes = []
+# from random import randint
+# for i in range(10):
+#     a = len(notes)
+#     notes.append(Note(i*start_size, start_size))
+# 
+#     a = notes[a].divide(5) 
+#     notes[a].divide(randint(1,4)) 
+#     notes[a+1].delete()
+#     notes[a+2].delete() 
+#     notes[a+3].divide(randint(1,4)) 
+#     notes[a+4].divide(randint(1,4)) 
 ##########################################################
 save(notes)
