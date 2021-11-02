@@ -1,4 +1,4 @@
-# Nested Tuple Generator
+# Nested Tuplet Generator
 
 > pip3 install midiutils
 
