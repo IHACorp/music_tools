@@ -1,3 +1,3 @@
 # music_tools
 
-- Nested Tuple Generator
+- Nested Tuplet Generator
